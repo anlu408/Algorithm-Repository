@@ -1,0 +1,53 @@
+def power (base, exponent):
+    if exponent == 0: #First base case. If 0 is exponent answer is 1.
+        return 1
+
+    elif exponent < 0 :
+        return 1 / base * power (base, exponent + 1)
+
+    base = base * power(base, exponent - 1)
+    return base
+
+
+print(power(2,-3))
+
+'''
+Explaination
+----------------------------------------------------------------------------
+
+We know that our base case is that if the exponent is 0, the resulting
+base raised to the power exponent is going to be 1 so we can just return 1.
+
+In positive exponents you just multiply by the base by itself as many times
+as the exponent.
+
+So with 2,3 ->
+2 is the base and 3 is the exponent.
+first if loop is skipped as 3 =/= 0
+second if loop is skipped as 3 > 0.
+
+set base = current base * power(current base, 3-1 = 2)
+
+First recursive function call. base is still equal to 2 and exponent is now
+2. both if loops are not satisfied so they are skipped.
+
+base = 2 * power (2, 2-1 -> 1)
+
+Second recursive function call occurs
+Base is still 2, exponent is now 1.
+
+Third function call. exponent is now equal to 0 so 1 is returned.
+
+Return to second function call
+base = 2 * 2 = 4
+
+return to first function call
+base = 2 * 4 = 8 which is the value printed with power (2,3).
+
+After finishing this portion I noticed that this would not
+work with negative exponents so I worked on recursive power for
+negative exponents as well. The approach was similar as negative exponents
+is just one divided by the base multiplied by itself as many times as the
+exponent.
+
+'''

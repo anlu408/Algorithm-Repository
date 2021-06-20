@@ -1,0 +1,48 @@
+def factorial(number):
+    if number == 0:
+        return 1
+
+    number = number * factorial(number - 1)
+    return number
+
+print(factorial(3))
+
+```
+Explanation
+--------------------------------------------------------------------------------------------------------------------
+Base case: factorial of 0 is always 1.
+
+number = current number * factorial (number - 1) allows us to recursively multiply by basically
+each previous number.
+
+With 3:
+
+number = 3
+if loop not fulfilled
+number is currently equal to 3
+number = 3 * factorial (3-1 = 2)
+
+First recursive function call
+number is now equal to 2.
+if loop not fulfilled -> move on
+number = 2 * factorial (2-1 = 1)
+
+Second recursive function call
+number is now equal to 1
+if loop not fulfilled -> move on
+number = 1 * factorial (1 -1 = 0)
+
+Third recursive function call
+number is now equal to 0
+if loop is satisfied. Return 1
+
+Return to second recursive function call
+number = 1 * 1 = 1
+
+Return to first recursive function call
+number = 2 * 1 = 2
+
+Return to original function call
+number = 3 * 2 = 6
+
+```

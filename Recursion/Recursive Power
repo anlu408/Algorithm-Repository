@@ -12,7 +12,7 @@ def power (base, exponent):
 print(power(2,-3))
 
 '''
-Explaination
+Explanation
 ----------------------------------------------------------------------------
 
 We know that our base case is that if the exponent is 0, the resulting

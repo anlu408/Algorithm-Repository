@@ -4,7 +4,7 @@ Splits an array in half, and searches for the correct value.
 Low and high as first and last element in array, and mid used to find center
 Guess used to store array element to compare with item.
 '''
-def binary_search(list,item):
+def binarySearch(list,item):
 
     low = 0
     high = len(list) - 1
@@ -16,7 +16,7 @@ def binary_search(list,item):
         if guess == item:
             return mid
         if guess > item:
-            high = mid -1
+            high = mid - 1
         else:
             low = mid + 1
         return None

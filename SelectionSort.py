@@ -2,12 +2,11 @@ def selectionSort(array):
 
     smallest = array[0]
     smallestIndex = 0
-    temp = 0
 
     for i in range (0, len(array)):
         smallest = array[i]
-        for j in range (i, len(array)):
-            if(smallest > array[j]):
+        for j in range(i, len(array)):
+            if (smallest > array[j]):
                 smallest = array[j]
                 smallestIndex = j
 

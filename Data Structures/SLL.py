@@ -54,10 +54,10 @@ class SLL:
 
     def insertSLL(self,value,location):
         newNode = Node(value)
-        #Insert at head
         if(self.head is None):
             self.head = newNode
             self.tail = newNode
+        #Insert at head
         else:
             if location == 0:
                 newNode.next = self.head

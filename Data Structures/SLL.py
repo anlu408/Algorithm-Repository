@@ -122,7 +122,7 @@ class SLL:
             elif location == -1: #Need to use -1 here.
                 if self.head == self.tail:
                     self.head = None
-                    elf.tail = None
+                    self.tail = None
                 else:
                     node = self.head
                     while node is not None:

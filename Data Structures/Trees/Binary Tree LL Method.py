@@ -62,6 +62,7 @@ def tree_node:
                     custom_queue.enqueue(root_node.value.data)
                 if root.value.right_child is not None:
                     custom_queue.enqueue(root_node.value.data)
+                    
     def search_bt(root_node, value):
         if not root_node:
             return

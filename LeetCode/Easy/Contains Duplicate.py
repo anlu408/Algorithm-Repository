@@ -24,7 +24,7 @@ class Solution:
         hashset = set()
 
         for i in nums:
-            if n in hashset:
+            if i in hashset: #base-case: if i is in the hashset, return true.
                 return True
             hashset.add(i)
             return False
